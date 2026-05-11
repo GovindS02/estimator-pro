@@ -1,0 +1,41 @@
+/* =========================
+   INVESTMENT CARD
+========================= */
+
+.investment-card {
+  width: 280px;
+  padding: 26px;
+
+  background: #22c55e;
+  color: darkgreen;
+
+  border-radius: 16px;
+}
+
+.investment-card .label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.investment-card h2 {
+  margin: 12px 0;
+
+  font-size: 34px;
+  font-weight: 850;
+}
+
+.investment-card p,
+.investment-card .time {
+  font-size: 13px;
+}
+
+.investment-card p {
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.investment-card .time {
+  margin-top: 16px;
+  font-weight: 500;
+}

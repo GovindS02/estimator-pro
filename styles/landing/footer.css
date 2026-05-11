@@ -1,0 +1,43 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* CONTAINER */
+
+.footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* LAYOUT */
+
+.footer-inner,
+.links {
+  display: flex;
+}
+
+.footer-inner {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LINKS */
+
+.links {
+  gap: 24px;
+}
+
+/* COPYRIGHT */
+
+.copyright {
+  margin-top: 0.5px;
+
+  font-size: 14px;
+  color: #6b7280;
+}

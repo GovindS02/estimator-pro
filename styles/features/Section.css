@@ -1,0 +1,206 @@
+/* =========================
+   MAIN SECTION
+========================= */
+
+.section {
+  width: 100%;
+  padding: 22px;
+  margin-bottom: 22px;
+
+  background: #f5f6f7;
+  border: 1px solid #ececec;
+  border-radius: 18px;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.sectionHeader,
+.sectionHeader h3,
+.section-arrow,
+.feature-card,
+.feature-checkbox {
+  display: flex;
+}
+
+.sectionHeader {
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.sectionHeader h3 {
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+/* LEFT ICON */
+
+.sectionHeader h3 svg {
+  font-size: 18px;
+  color: #15803d;
+}
+
+/* RIGHT ARROW */
+
+.section-arrow {
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  color: #6b7280;
+}
+
+/* =========================
+   FEATURE GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* =========================
+   FEATURE MINI CARD
+========================= */
+
+.feature-card {
+  align-items: center;
+  gap: 14px;
+
+  min-height: 68px;
+  padding: 16px;
+
+  background: #fff;
+
+  border: 1.5px solid #eef0f2;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+
+.feature-card:hover {
+  border-color: #22c55e;
+}
+
+/* ACTIVE */
+
+.feature-card.active {
+  background: #fff;
+  border-color: #16a34a;
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.feature-checkbox {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+
+  transition: all 0.2s ease;
+}
+
+/* ACTIVE CHECKBOX */
+
+.feature-card.active .feature-checkbox {
+  background: #15803d;
+  border-color: #15803d;
+  color: #fff;
+}
+
+/* =========================
+   TEXT CONTENT
+========================= */
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* MAIN TITLE */
+
+.feature-title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: #111827;
+}
+
+/* SUBTITLE */
+
+.feature-desc {
+  margin-top: 4px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+
+  color: #9ca3af;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 18px;
+  }
+
+  .feature-card {
+    padding: 14px;
+  }
+
+  .sectionHeader h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+  }
+
+  .feature-desc {
+    font-size: 11px;
+  }
+}

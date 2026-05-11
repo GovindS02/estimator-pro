@@ -1,0 +1,89 @@
+/* =========================
+   SAFE GLOBAL
+========================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   SUMMARY PAGE
+========================= */
+
+.summary-page {
+  min-height: 100vh;
+  background: #f5f7f9;
+}
+
+/* CONTAINER */
+
+.summary-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* GRID LAYOUT */
+
+.summary-top,
+.summary-bottom {
+  display: grid;
+  gap: 24px;
+}
+
+.summary-top {
+  grid-template-columns: 320px 1fr;
+}
+
+.summary-bottom {
+  grid-template-columns: 1fr 380px;
+  margin-top: 24px;
+}
+
+/* EXPERT SECTION */
+
+.expert-section {
+  display: block;
+  margin-top: 48px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .summary-top,
+  .summary-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .expert-section {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-container {
+    padding: 24px 16px;
+  }
+
+  .summary-top,
+  .summary-bottom {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-container {
+    padding: 20px 14px;
+  }
+
+  .summary-top,
+  .summary-bottom {
+    gap: 16px;
+  }
+}

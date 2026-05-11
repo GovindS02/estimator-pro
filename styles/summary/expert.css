@@ -1,0 +1,92 @@
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+.expert {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  align-items: center;
+  gap: 64px;
+  margin-top: 56px;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.expert-left h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.expert-left p {
+  max-width: 420px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* =========================
+   REVIEW CARD
+========================= */
+
+.review-card,
+.avatar,
+.expert-right {
+  display: flex;
+  align-items: center;
+}
+
+.review-card {
+  width: 360px;
+  margin-top: 20px;
+  padding: 12px 14px;
+  gap: 10px;
+  background: lightgray;
+  border-radius: 10px;
+}
+
+.avatar,
+.expert-right {
+  justify-content: center;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+}
+
+.review-card strong {
+  display: block;
+  font-size: 13px;
+  color: #111827;
+}
+
+.review-card span {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* =========================
+   RIGHT SIDE (CRITICAL)
+========================= */
+
+/* IMAGE — EXACT FIGMA FEEL */
+
+.expert-right img {
+  width: 450px;
+  height: auto;
+  display: block;
+  margin-left: 50px;
+  border-radius: 22px;
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.35),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}

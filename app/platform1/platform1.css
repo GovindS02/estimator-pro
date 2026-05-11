@@ -1,0 +1,651 @@
+/* ================= BASE ================= */
+
+body {
+  background: #f8fafc;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #111827;
+}
+
+/* ================= CONTAINER ================= */
+
+.container-platform1 {
+  max-width: 1024px;
+  margin: auto;
+  padding: 32px 24px;
+}
+
+/* ================= HEADER ================= */
+
+.step3-header {
+  margin-bottom: 28px;
+}
+
+.step3-top,
+.step3-steps,
+.meta-row,
+.ps-bottom,
+.left-actions,
+.right-actions,
+.scale-options,
+.scale-meta {
+  display: flex;
+}
+
+.step3-top,
+.step3-steps,
+.meta-row,
+.ps-bottom {
+  justify-content: space-between;
+}
+
+.step3-top,
+.meta-row,
+.ps-bottom,
+.right-actions {
+  align-items: center;
+}
+
+.step3-top {
+  align-items: flex-start;
+}
+
+.step3-badge {
+  padding: 4px 10px;
+
+  background: #dcfce7;
+  color: #16a34a;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.step3-title {
+  margin-top: 10px;
+
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.step3-title span {
+  color: #22c55e;
+}
+
+.step3-price {
+  text-align: right;
+}
+
+.step3-price p {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.step3-price h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ================= PROGRESS ================= */
+
+.step3-progress,
+.meta-bar,
+.meta-line {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+.step3-progress {
+  height: 4px;
+  margin: 20px 0 8px;
+}
+
+.step3-progress-fill {
+  width: 60%;
+  height: 100%;
+
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+.step3-steps {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.step3-steps span.active {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* ================= PLATFORM CARDS ================= */
+
+.ps-cards,
+.platform-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ps-cards {
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.platform-cards {
+  gap: 18px;
+}
+
+.ps-card,
+.platform-card,
+.config-box,
+.scale-info {
+  border-radius: 16px;
+}
+
+.ps-card {
+  padding: 22px;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.ps-card.active,
+.platform-card.active {
+  border: 2px solid #22c55e;
+}
+
+/* ================= MAIN GRID ================= */
+
+.ps-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* ================= SCALE ================= */
+
+.scale-box,
+.scale-wrapper {
+  width: 100%;
+  background: #f5f7f9;
+}
+
+.scale-box {
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.scale-wrapper {
+  max-width: 640px;
+  padding: 42px;
+  border-radius: 20px;
+}
+
+.scale-title {
+  margin-bottom: 26px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #9ca3af;
+}
+
+.scale-options {
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+/* SCALE CARD */
+
+.scale,
+.scale-card {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+
+  border-radius: 8px;
+}
+
+.scale-card {
+  position: relative;
+
+  height: 86px;
+  padding-top: 12px;
+
+  align-items: flex-start;
+
+  background: #e5e7eb;
+}
+
+.scale {
+  padding: 14px 0;
+
+  text-align: center;
+
+  background: #22c55e;
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.scale.disabled,
+.scale-card.disabled {
+  background: #dfe3e7;
+  color: #9ca3af;
+}
+
+.scale-card.active {
+  background: #2fda69;
+}
+
+.scale-card.disabled {
+  height: 50px;
+}
+
+.scale-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f8a38;
+}
+
+.disabled-text {
+  color: #b0b7c3;
+}
+
+/* DESCRIPTION */
+
+.scale-desc,
+.scale-info {
+  background: #fff;
+}
+
+.scale-desc {
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+}
+
+.scale-info {
+  padding: 28px;
+  margin-bottom: 34px;
+  border-radius: 14px;
+}
+
+.scale-desc h4,
+.scale-info h4 {
+  font-weight: 700;
+  color: #111827;
+}
+
+.scale-desc h4 {
+  font-size: 14px;
+}
+
+.scale-info h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.scale-desc p,
+.scale-info p,
+.note p,
+.platform-card p {
+  color: #6b7280;
+}
+
+.scale-desc p {
+  font-size: 12px;
+}
+
+.scale-info p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* META */
+
+.meta-row {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.scale-meta {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.meta-group {
+  width: 100%;
+}
+
+.meta-row span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #6b7280;
+}
+
+.meta-bar {
+  height: 4px;
+  margin-top: 6px;
+}
+
+.meta-line {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+}
+
+/* TAGS & BADGES */
+
+.tag,
+.badge {
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.tag {
+  padding: 4px 10px;
+}
+
+.badge {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.tag.green,
+.badge.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tag.blue,
+.badge.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+/* ================= CONFIG ================= */
+
+.config-box {
+  padding: 20px;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.config-title {
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.config-list {
+  padding: 0;
+  list-style: none;
+}
+
+.config-list li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.dot,
+.platform-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+
+  margin-top: 6px;
+
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.config-list b {
+  font-size: 13px;
+}
+
+.config-list p {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* NOTE */
+
+.note {
+  margin-top: 14px;
+  padding-top: 10px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.note span {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.note p {
+  font-size: 11px;
+}
+
+/* IMAGE */
+
+.image-box {
+  height: 120px;
+  margin-top: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("/images/cloud.png");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 12px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= BOTTOM ================= */
+
+.ps-bottom {
+  margin-top: 30px;
+}
+
+.right-actions {
+  gap: 12px;
+}
+
+/* BUTTONS */
+
+.review,
+.next {
+  border: none;
+}
+
+.review {
+  padding: 10px 18px;
+
+  background: #e5e7eb;
+  color: #374151;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+.back {
+  font-size: 14px;
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+.next {
+  padding: 12px 22px;
+
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+  color: #fff;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  box-shadow: 0 6px 14px rgba(34, 197, 94, 0.3);
+}
+
+/* ================= PLATFORM CARD ================= */
+
+.platform-card {
+  padding: 20px;
+
+  background: #f9fafb;
+  border: 1px solid transparent;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-2px);
+}
+
+.platform-card.active {
+  background: #ecfdf5;
+}
+
+.platform-icon {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 12px;
+
+  background: #e5e7eb;
+  border-radius: 10px;
+
+  font-size: 18px;
+}
+
+.platform-card.active .platform-icon {
+  background: #22c55e;
+  color: #fff;
+}
+
+.platform-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.platform-card p {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.platform-status {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.active-text {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.inactive-text {
+  color: #9ca3af;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .ps-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .scale-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .step3-top,
+  .ps-bottom,
+  .right-actions,
+  .scale-options,
+  .meta-row {
+    flex-direction: column;
+  }
+
+  .step3-top,
+  .meta-row {
+    align-items: flex-start;
+  }
+
+  .step3-top,
+  .ps-bottom {
+    gap: 16px;
+  }
+
+  .right-actions {
+    width: 100%;
+  }
+
+  .platform-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .step3-price {
+    text-align: left;
+  }
+
+  .review,
+  .next {
+    width: 100%;
+  }
+
+  .meta-row {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-platform1 {
+    padding: 20px 14px;
+  }
+
+  .step3-title {
+    font-size: 24px;
+  }
+
+  .scale-wrapper,
+  .config-box,
+  .ps-card,
+  .scale-info {
+    padding: 18px;
+  }
+}

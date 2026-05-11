@@ -1,0 +1,100 @@
+.architecture {
+  background: #fff;
+  padding: 34px 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  flex: 1;
+  min-height: 315px;
+  box-sizing: border-box;
+}
+
+/* TITLE */
+
+.architecture .title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* GRID */
+
+.arch-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 58px;
+  gap: 18px;
+}
+
+/* ITEM */
+
+.arch-item,
+.arch-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-item {
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ICON BOX */
+
+.arch-item .icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: #f3f4f6;
+  color: #667085;
+  margin-bottom: 24px;
+}
+
+/* HEADING */
+
+.arch-item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+/* SUBTEXT */
+
+.arch-item span {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #9ca3af;
+}
+
+/* DIVIDER */
+
+.divider {
+  width: 58px;
+  height: 1px;
+  background: #e5e7eb;
+  margin-top: -40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .arch-grid {
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    margin-top: 0;
+  }
+
+  .architecture {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,40 @@
+/* =========================
+   PREVIEW
+========================= */
+
+.preview {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* WRAPPER */
+
+.preview-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+  width: 100%;
+  max-width: 1000px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .preview {
+    margin: 40px auto;
+  }
+
+  .dashboard {
+    max-width: 100%;
+  }
+}

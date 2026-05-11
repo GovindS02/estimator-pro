@@ -1,0 +1,79 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  padding: 24px;
+
+  background: #fff;
+  border-radius: 12px;
+}
+
+/* TOP ROW */
+
+.header-top,
+.progress-bar {
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT */
+
+.header-left h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.header-left p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+/* RIGHT */
+
+.header-right {
+  text-align: right;
+}
+
+.step {
+  padding: 5px 10px;
+
+  background: #dcfce7;
+  color: #16a34a;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.step-text {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* PROGRESS BAR */
+
+.progress-bar {
+  height: 6px;
+  margin-top: 20px;
+
+  overflow: hidden;
+
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  width: 40%;
+  height: 100%;
+
+  background: #22c55e;
+  border-radius: 10px;
+
+  transition: width 0.4s ease;
+}

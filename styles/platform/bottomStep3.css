@@ -1,0 +1,47 @@
+/* =========================
+   BOTTOM ACTIONS
+========================= */
+
+.ps-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.back,
+.review,
+.next {
+  border: none;
+}
+
+.back,
+.next {
+  cursor: pointer;
+}
+
+/* BACK BUTTON */
+
+.back {
+  background: none;
+  color: #6b7280;
+}
+
+/* REVIEW BUTTON */
+
+.review {
+  padding: 10px 14px;
+  background: #e5e7eb;
+  border-radius: 8px;
+}
+
+/* NEXT BUTTON */
+
+.next {
+  padding: 12px 20px;
+
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+  color: #fff;
+
+  border-radius: 10px;
+}
