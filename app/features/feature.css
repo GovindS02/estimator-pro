@@ -1,70 +1,125 @@
-/* page background */
+/* =========================
+   FEATURES PAGE
+========================= */
+
 .features-page {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
   background: #f8fafc;
+
   padding: 40px 0;
 }
 
-/* container */
+/* =========================
+   CONTAINER
+========================= */
+
 .features-page .container {
   max-width: 1200px;
+
   margin: auto;
+
   padding: 0 20px;
 }
 
-/* MAIN LAYOUT */
+/* =========================
+   MAIN LAYOUT
+========================= */
+
 .features-layout {
+  flex: 1;
+
   display: flex;
-  gap: 24px;
-  margin-top: 30px;
   align-items: flex-start;
+
+  gap: 24px;
+
+  margin-top: 30px;
 }
 
-/* LEFT SIDE */
+/* =========================
+   LEFT SIDE
+========================= */
+
 .features-left {
   flex: 2;
+
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 }
 
-/* RIGHT SIDE */
+/* =========================
+   RIGHT SIDE
+========================= */
+
 .features-right {
   flex: 1;
 }
 
-/* STICKY PANEL */
-.features-right .panel {
+/* =========================
+   FIXED STICKY WRAPPER
+========================= */
+
+.features-right .panel-wrapper {
   position: sticky;
   top: 100px;
 }
 
-/* BOTTOM BUTTON BAR */
-.bottom-btn {
+/* =========================
+   PANEL WRAPPER
+========================= */
+
+.panel-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px; /* controls spacing between summary & expert review */
+}
+
+/* =========================
+   BOTTOM BUTTON BAR
+========================= */
+
+.bottom-bar {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+
+  margin-top: auto;
 }
 
-/* BUTTONS */
-.bottom-btn .continue {
+/* =========================
+   BUTTONS
+========================= */
+
+.back {
+  padding: 10px 16px;
+
+  background: #e5e7eb;
+
+  border: none;
+  border-radius: 8px;
+}
+
+.continue {
+  padding: 12px 24px;
+
   background: #22c55e;
   color: white;
-  padding: 12px 24px;
+
+  border: none;
   border-radius: 8px;
-  border: none;
 }
 
-.bottom-btn .back {
-  background: transparent;
-  border: none;
-  color: #555;
-}
-
-/* RESPONSIVE */
-/* ================= FEATURES RESPONSIVE ================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 1024px) {
-
   .features-layout {
     gap: 18px;
   }
@@ -76,19 +131,17 @@
 }
 
 @media (max-width: 768px) {
-
-  .features-layout {
+  .features-layout,
+  .bottom-bar {
     flex-direction: column;
   }
 
-  .features-right .panel {
+  .features-right .panel-wrapper {
     position: relative;
     top: 0;
   }
 
-  .bottom-bar,
-  .bottom-btn {
-    flex-direction: column;
+  .bottom-bar {
     gap: 12px;
   }
 
@@ -99,7 +152,6 @@
 }
 
 @media (max-width: 480px) {
-
   .features-page {
     padding: 20px 0;
   }
@@ -107,38 +159,4 @@
   .features-page .container {
     padding: 0 14px;
   }
-}
-.bottom-bar {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-.back {
-  background: #e5e7eb;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-}
-
-.continue {
-  background: #22c55e;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-}
-.features-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.features-layout {
-  flex: 1;
-}
-
-/* KEEP BUTTONS AT BOTTOM */
-.bottom-bar {
-  margin-top: auto;
 }
