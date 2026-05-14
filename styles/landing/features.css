@@ -22,3 +22,75 @@
 .card h2 {
   color: #16a34a;
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .features .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .features {
+    padding: 50px 0;
+  }
+
+  .features .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+
+  .features {
+    padding: 48px 0;
+  }
+
+  .features .container {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    padding: 0 16px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card h2 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .features {
+    padding: 40px 0;
+  }
+
+  .features .container {
+    gap: 18px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+}

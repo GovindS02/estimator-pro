@@ -3,13 +3,17 @@
 ========================= */
 
 .investment-card {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
+
   padding: 26px;
 
   background: #22c55e;
   color: darkgreen;
 
   border-radius: 16px;
+
+  box-sizing: border-box;
 }
 
 .investment-card .label {
@@ -38,4 +42,81 @@
 .investment-card .time {
   margin-top: 16px;
   font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .investment-card {
+    max-width: 100%;
+  }
+
+  .investment-card h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .investment-card {
+    padding: 22px;
+  }
+
+  .investment-card h2 {
+    font-size: 26px;
+  }
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+
+  .nav-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 16px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    width: 100%;
+  }
+
+  .save {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
 }

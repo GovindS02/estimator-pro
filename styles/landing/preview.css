@@ -38,3 +38,13 @@
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+
+  .preview {
+    padding: 0 16px;
+  }
+
+  .dashboard {
+    border-radius: 14px;
+  }
+}

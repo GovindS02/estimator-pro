@@ -83,3 +83,58 @@
 .secondary {
   background: #f3f4f6;
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .title {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 70px 16px 50px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    align-items: center;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .primary {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 30px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+}

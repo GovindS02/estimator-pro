@@ -98,3 +98,18 @@
     min-height: auto;
   }
 }
+@media (max-width: 768px) {
+
+  .architecture {
+    padding: 24px 20px;
+  }
+
+  .arch-item .icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .arch-item span {
+    font-size: 12px;
+  }
+}

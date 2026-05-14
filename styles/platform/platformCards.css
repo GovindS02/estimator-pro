@@ -58,3 +58,24 @@
 .ps-active {
   color: #16a34a;
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .ps-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .ps-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ps-card {
+    min-height: auto;
+  }
+}

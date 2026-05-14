@@ -29,3 +29,24 @@
   gap: 24px;
   margin-top: 24px;
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .ps-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container-platform1 {
+    padding: 18px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

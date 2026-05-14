@@ -47,3 +47,17 @@
 
   font-weight: 600;
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .form-box {
+    padding: 18px;
+  }
+
+  .form-box button {
+    padding: 14px;
+  }
+}

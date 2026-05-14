@@ -129,3 +129,44 @@
 
   border-radius: 6px;
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .save {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    font-size: 13px;
+    gap: 12px;
+  }
+}

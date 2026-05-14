@@ -1,0 +1,92 @@
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.header p {
+  color: #777;
+}
+
+.step {
+  background: #e6f4ea;
+  color: #16a34a;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* SECTION */
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* CARD */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid #22c55e;
+}
+
+/* PANEL */
+.panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  position: sticky;
+  top: 20px;
+}
+
+.count {
+  margin: 10px 0;
+  color: #555;
+}
+
+.priceBox h2 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.button {
+  margin-top: 20px;
+  width: 100%;
+  background: #22c55e;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

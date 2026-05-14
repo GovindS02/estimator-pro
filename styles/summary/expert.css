@@ -90,3 +90,48 @@
     0 40px 80px rgba(0, 0, 0, 0.35),
     0 10px 30px rgba(0, 0, 0, 0.2);
 }
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .expert {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .expert-left p {
+    max-width: 100%;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .expert-right {
+    justify-content: center;
+  }
+
+  .expert-right img {
+    width: 100%;
+    max-width: 450px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .expert {
+    margin-top: 40px;
+  }
+
+  .expert-left h2 {
+    font-size: 20px;
+  }
+
+  .expert-right img {
+    border-radius: 18px;
+  }
+}
