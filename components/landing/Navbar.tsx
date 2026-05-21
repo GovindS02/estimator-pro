@@ -17,6 +17,15 @@ export default function Navbar() {
   const [loading, setLoading] =
     useState(false);
 
+  const [showModal, setShowModal] =
+    useState(false);
+
+  const [username, setUsername] =
+    useState("");
+
+  const [password, setPassword] =
+    useState("");
+
   /* =========================
      CHECK LOGIN STATE
   ========================= */
@@ -44,6 +53,8 @@ export default function Navbar() {
 
       localStorage.removeItem("token");
 
+      localStorage.removeItem("username");
+
       setIsLoggedIn(false);
 
       alert("Logged out");
@@ -51,61 +62,73 @@ export default function Navbar() {
       return;
     }
 
-    /* LOGIN */
+    /* OPEN LOGIN MODAL */
+
+    setShowModal(true);
+  };
+
+  /* =========================
+     SIGN IN
+  ========================= */
+
+  const handleSignIn = async () => {
 
     try {
 
       setLoading(true);
 
-      const response = await fetch(
-        "https://dummyjson.com/auth/login",
-        {
-          method: "POST",
+      /* VALIDATION */
 
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
-
-          body: JSON.stringify({
-            username: "emilys",
-
-            password: "emilyspass",
-
-            expiresInMins: 30,
-          }),
-
-          credentials: "include",
-        }
-      );
-
-      /* EXCEPTION HANDLING */
-
-      if (!response.ok) {
+      if (!username.trim()) {
 
         throw new Error(
-          "Authentication Failed"
+          "Username required"
         );
       }
 
-      const data =
-        await response.json();
+      if (!password.trim()) {
 
-      console.log(
-        "Authenticated User:",
-        data
-      );
+        throw new Error(
+          "Password required"
+        );
+      }
 
-      /* CACHE TOKEN */
+      /* GENERATE TOKEN */
+
+      const fakeToken =
+        "token_" +
+        Math.random()
+          .toString(36)
+          .substring(2);
+
+      /* SAVE TOKEN */
 
       localStorage.setItem(
         "token",
-        data.accessToken
+        fakeToken
       );
+
+      /* SAVE USER */
+
+      localStorage.setItem(
+        "username",
+        username
+      );
+
+      console.log({
+        username,
+        token: fakeToken,
+      });
 
       /* SUCCESS */
 
       setIsLoggedIn(true);
+
+      setShowModal(false);
+
+      setUsername("");
+
+      setPassword("");
 
       alert("Login Successful");
 
@@ -125,57 +148,125 @@ export default function Navbar() {
   };
 
   return (
-    <div className="navbar">
-      <div className="container nav-inner">
+    <>
+      <div className="navbar">
 
-        <h1 className="logo">
-          Estimator Pro
-        </h1>
+        <div className="container nav-inner">
 
-        <div className="nav-links">
+          {/* LOGO */}
 
-          <Link href="/">
-            Landing
-          </Link>
+          <h1 className="logo">
+            Estimator Pro
+          </h1>
 
-          <Link href="/features">
-            Project Type
-          </Link>
+          {/* LINKS */}
 
-          <Link href="/#features">
-            Features
-          </Link>
+          <div className="nav-links">
 
-          <Link href="/platform1">
-            Platform
-          </Link>
+            <Link href="/">
+              Landing
+            </Link>
 
-          <Link href="/summary">
-            Summary
-          </Link>
+            <Link href="/features">
+              Project Type
+            </Link>
 
-        </div>
+            <Link href="/#features">
+              Features
+            </Link>
 
-        <div className="nav-actions">
+            <Link href="/platform1">
+              Platform
+            </Link>
 
-          <button
-            className="login"
-            onClick={handleAuth}
-            disabled={loading}
-          >
-            {loading
-              ? "Loading..."
-              : isLoggedIn
-              ? "Logout"
-              : "Log in"}
-          </button>
+            <Link href="/summary">
+              Summary
+            </Link>
 
-          <button className="save">
-            Save Estimate
-          </button>
+          </div>
 
+          {/* ACTIONS */}
+
+          <div className="nav-actions">
+
+            <button
+              className="login"
+              onClick={handleAuth}
+              disabled={loading}
+            >
+              {loading
+                ? "Loading..."
+                : isLoggedIn
+                ? "Logout"
+                : "Log in"}
+            </button>
+
+            <button className="save">
+              Save Estimate
+            </button>
+
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* =========================
+         LOGIN MODAL
+      ========================= */}
+
+      {showModal && (
+
+        <div className="login-modal-overlay">
+
+          <div className="login-modal">
+
+            <h2>
+              Sign In
+            </h2>
+
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) =>
+                setUsername(
+                  e.target.value
+                )
+              }
+            />
+
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) =>
+                setPassword(
+                  e.target.value
+                )
+              }
+            />
+
+            <button
+              className="login-submit"
+              onClick={handleSignIn}
+              disabled={loading}
+            >
+              {loading
+                ? "Signing In..."
+                : "Sign In"}
+            </button>
+
+            <button
+              className="close-modal"
+              onClick={() =>
+                setShowModal(false)
+              }
+            >
+              Cancel
+            </button>
+
+          </div>
+        </div>
+      )}
+    </>
   );
 }
